@@ -4,7 +4,7 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f8f9fa;
+  background: #ececed;
   color: #222;
 }
 
@@ -13,13 +13,40 @@ body {
   margin: 0 auto;
 }
 
-header {
+/* header {
   background: #2d3e50;
-}
+} */
 
 .header-content {
   color: #fff;
-  padding: 2rem 0;
+  padding: 7em 0 5em 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1em;
+}
+
+.text {
+  grid-area: 1 / 1 / 4 / 3;
+  padding: 2em 4em;
+  background: url(Images/hero-text-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(15px);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.body {
+  grid-area: 1 / 3 / 3 / 4;
+}
+
+.text, .body, .image {
+  border-radius: 25px;
+}
+
+.text * {
+  color: #ffb347;
 }
 
 nav {
